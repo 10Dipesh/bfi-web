@@ -1,9 +1,11 @@
 import Layout from '@/components/layout/Layout';
 
-export default function Home() {
+export const About: React.FC = () => {
   return (
     <Layout>
-      <div>BFI home</div>
+      <div>About</div>
     </Layout>
   );
-}
+};
+
+export default About;
