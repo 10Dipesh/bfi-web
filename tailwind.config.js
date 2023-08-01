@@ -13,6 +13,18 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
+    fontFamily:{
+      'Ysabeau':['Ysabeau Office', 'sans-serif']
+    },
+    colors: {
+      'primary': '#164B60',
+      'secondary': '#1B6B93',
+      'tertiary': '#4FC0D0',
+      'green':'#A2FF86',
+      'black':'#000',
+      'white':'#FFFFFF',
+      'red':'#FF0000',
+    }
   },
   plugins: [],
 }
