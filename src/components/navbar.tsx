@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ROUTES } from "../constants";
+import { NAV_ROUTES } from "../constants";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -31,7 +31,7 @@ const MobileMenu: React.FC = () => {
       </div>
       {isOpen && (
         <div className="fixed flex justify-center item-center flex-col gap-5 top-0 h-full w-full bg-white z-10">
-          {Object.entries(ROUTES).map(([key, value]) => (
+          {Object.entries(NAV_ROUTES).map(([key, value]) => (
             <Link href={value} key={key}>
               <div onClick={() => setIsOpen(false)} className="text-red">
                 {key}
@@ -56,24 +56,11 @@ const DesktopMenu: React.FC = () => {
         />
       </div>
       <div className="flex flex-row gap-10 items-center justify-center mr-10">
-        <Link href={"/"}>
-          <div className="text-white">Home</div>
-        </Link>
-        <Link href={"/about"}>
-          <div className="text-white">About</div>
-        </Link>
-        <Link href={"/projects"}>
-          <div className="text-white">Projects</div>
-        </Link>
-        <Link href={"/services"}>
-          <div className="text-white">Services</div>
-        </Link>
-        <Link href={"/carrer"}>
-          <div className="text-white">Carrer</div>
-        </Link>
-        <Link href={"/contact"}>
-          <div className="text-white">Contact</div>
-        </Link>
+        {Object.entries(NAV_ROUTES).map(([key, value]) => (
+          <Link href={value}>
+            <div className="text-white">{key}</div>
+          </Link>
+        ))}
       </div>
     </nav>
   );

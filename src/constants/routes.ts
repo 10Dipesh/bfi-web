@@ -1,4 +1,4 @@
-const ROUTES = {
+export const NAV_ROUTES = {
   Home: "/",
   About: "/about",
   Projects: "/projects",
@@ -6,4 +6,12 @@ const ROUTES = {
   Carrer: "/carrer",
   Contact: "/contact",
 };
+const ROUTES = {
+  ...NAV_ROUTES,
+  completed: "/projects/completed",
+  running: "/projects/running",
+  
+}
 export default ROUTES;
+
+

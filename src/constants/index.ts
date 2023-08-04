@@ -1,2 +1,2 @@
-import ROUTES from "./routes";
-export {ROUTES};
+import ROUTES, {NAV_ROUTES} from "./routes";
+export {ROUTES, NAV_ROUTES};

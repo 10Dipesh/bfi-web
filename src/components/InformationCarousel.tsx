@@ -29,6 +29,7 @@ const Content: IContent[] = [
     image: "/images/bfi4.jpg",
   },
 ];
+
 const InformationCarousel = () => {
   const [sliderRef] = useKeenSlider(
     {
@@ -43,24 +44,33 @@ const InformationCarousel = () => {
   );
 
   return (
-    <div
-      ref={sliderRef}
-      className="keen-slider h-[500px] w-screen mt-5 bg-red"
-    >
-      {Content.map((item, index) => (
+    <div className=" flex justify-center items-center">
+      <div className="  w-[90%] h-[300px] md:w-[900px] md:h-[400px]">
         <div
-          className="w-[300px] h-[300px] bg-secondary keen-slider__slide flex justify-center items-center gap-7"
-          key={index}
+          ref={sliderRef}
+          className="h-full keen-slider mt-5 border-4 border-black rounded-xl"
         >
-          <div className="h-[100px] w-[100px] border-4 rounded-[50%]  overflow-hidden">
-            <img className="w-full h-full" src={item.image} alt="" />
-          </div>
-          <div className="top-20 left-20 text-3xl font-bold text-white">
-            {typeof item.text === "string" ? item.text : item.text()}
-          </div>
+          {Content.map((item, index) => (
+            <div
+              className=" bg-primary keen-slider__slide flex justify-center items-center gap-7"
+              key={index}
+            >
+              <div className="h-[80px] w-[80px] border-4 rounded-[50%] overflow-hidden">
+                <img
+                  className="w-full h-full object-cover"
+                  src={item.image}
+                  alt=""
+                />
+              </div>
+              <div className="top-20 left-20 text-3xl font-bold text-white">
+                {typeof item.text === "string" ? item.text : item.text()}
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
     </div>
   );
 };
+
 export default InformationCarousel;
