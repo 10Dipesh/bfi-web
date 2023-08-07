@@ -17,15 +17,15 @@ const Content: IContent[] = [
     image: "/images/bfi1.jpg",
   },
   {
-    text: "hello world",
+    text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis",
     image: "/images/bfi2.jpg",
   },
   {
-    text: "hello world",
+    text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis",
     image: "/images/bfi3.jpg",
   },
   {
-    text: "hello world",
+    text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis",
     image: "/images/bfi4.jpg",
   },
 ];
@@ -44,26 +44,23 @@ const Projects = () => {
   );
 
   return (
-    <div className=" flex justify-center items-center mx">
-      <div className="w-[90%] h-[300px] md:w-[900px] md:h-[400px] flex flex-col justify-between items-start">
+    <div className=" flex justify-center items-center mt-[5rem]">
+      <div className="relative w-full h-[300px] md:w-[1100px] md:h-[700px] flex flex-col justify-between items-start ">
         <h1 className="font-extrabold text-[60px] ">Featured Work</h1>
-        <div
-          ref={sliderRef}
-          className="h-full keen-slider mt-5 border-4 border-black rounded-xl"
-        >
+        <div ref={sliderRef} className="h-full keen-slider mt-5 ">
           {Content.map((item, index) => (
             <div
-              className=" bg-primary keen-slider__slide flex justify-center items-center gap-7"
+              className="keen-slider__slide flex justify-center items-center gap-7"
               key={index}
             >
-              <div className="h-[80px] w-[80px] border-4 rounded-[50%] overflow-hidden">
+              <div className="absolute left-4 top-20 h-[300px] w-[500px] shadow drop-shadow-lg">
                 <img
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover rounded-[10px]"
                   src={item.image}
                   alt=""
                 />
               </div>
-              <div className="top-20 left-20 text-3xl font-bold text-white">
+              <div className="text-3xl font-bold text-black h-[250px] w-[600px] shadow drop-shadow-lg bg-secondary absolute top-[15rem] right-6 rounded-[10px]">
                 {typeof item.text === "string" ? item.text : item.text()}
               </div>
             </div>
