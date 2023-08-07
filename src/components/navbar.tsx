@@ -45,12 +45,12 @@ const MobileMenu: React.FC = () => {
 };
 const DesktopMenu: React.FC = () => {
   return (
-    <nav className="w-full h-[50px] bg-black hidden md:flex justify-between">
+    <nav className=" w-full h-[78px] fixed z-10 bg-white hidden md:flex justify-between shadow-md">
       <div className="px-6 ml-6">
         <Image
           src="/images/BFI-logo.ico"
           alt="logo"
-          width={20}
+          width={50}
           height={20}
           className="object-contain"
         />
@@ -58,7 +58,7 @@ const DesktopMenu: React.FC = () => {
       <div className="flex flex-row gap-10 items-center justify-center mr-10">
         {Object.entries(NAV_ROUTES).map(([key, value]) => (
           <Link href={value}>
-            <div className="text-white">{key}</div>
+            <div className="text-black">{key}</div>
           </Link>
         ))}
       </div>

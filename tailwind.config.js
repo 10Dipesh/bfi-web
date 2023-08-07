@@ -17,7 +17,7 @@ module.exports = {
       'Ysabeau':['Ysabeau Office', 'sans-serif']
     },
     colors: {
-      'primary': '#164B60',
+      'primary': '#0275c8;',
       'secondary': '#1B6B93',
       'tertiary': '#4FC0D0',
       'green':'#A2FF86',
