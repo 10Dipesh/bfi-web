@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="h-[400px] w-[100%] bg-black text-white mt-8">
+    <div className="h-[400px] w-[100%] bg-black text-white">
       Bright Future International Pvt. Ltd
     </div>
   );
