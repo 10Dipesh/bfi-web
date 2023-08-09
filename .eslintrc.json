@@ -1,3 +1,16 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "plugin:@next/next/recommended",
+    "next/core-web-vitals",
+    "prettier"
+  ],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": ["warn"],
+    "no-console": ["warn", { "allow": ["warn", "error", "info"] }],
+    "@next/next/no-img-element": "off",
+    "@next/next/link-passhref": "off"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": { "ecmaVersion": 2017 }
 }

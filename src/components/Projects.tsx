@@ -3,28 +3,29 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 
 interface IContent {
-  text: (() => JSX.Element) | string;
+  heading: string;
+  text: string;
   image: string;
 }
 
 const Content: IContent[] = [
   {
-    text: () => (
-      <p>
-        hello <span className="text-red">RED word</span> world
-      </p>
-    ),
+    heading: "LOREM IPSUM DOLOR",
+    text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis",
     image: "/images/bfi1.jpg",
   },
   {
+    heading: "LOREM IPSUM DOLOR",
     text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis",
     image: "/images/bfi2.jpg",
   },
   {
+    heading: "LOREM IPSUM DOLOR",
     text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis",
     image: "/images/bfi3.jpg",
   },
   {
+    heading: "LOREM IPSUM DOLOR",
     text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis",
     image: "/images/bfi4.jpg",
   },
@@ -55,15 +56,16 @@ const Projects: React.FC = () => {
               className="keen-slider__slide flex justify-center items-center gap-7"
               key={index}
             >
-              <div className="absolute left-4 top-20 h-[300px] w-[500px] shadow drop-shadow-lg rounded-[20px] overflow-hidden ">
+              <div className="absolute left-4 top-20 h-[300px] w-[500px] shadow drop-shadow-xl rounded-[20px] overflow-hidden ">
                 <img
                   className="w-full h-full object-cover "
                   src={item.image}
                   alt=""
                 />
               </div>
-              <div className="text-3xl font-bold text-black h-[250px] w-[600px] text-center shadow drop-shadow-lg absolute top-[15rem] right-6 rounded-[10px] bg-light">
-                {typeof item.text === "string" ? item.text : item.text()}
+              <div className="text-3xl font-bold text-black h-[300px] w-[600px] text-center shadow drop-shadow-lg absolute top-[15rem] right-6 rounded-[10px] bg-light">
+                <h1>{item.heading}</h1>
+                <p>{item.text}</p>
               </div>
             </div>
           ))}

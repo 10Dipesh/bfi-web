@@ -14,7 +14,7 @@ const Content: IContent[] = [
   },
   {
     count: "12 years +",
-    text: "Projects Completed",
+    text: "Experience",
   },
 ];
 const ProjectsHandled: React.FC = () => {

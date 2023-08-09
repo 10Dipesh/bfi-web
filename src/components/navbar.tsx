@@ -57,7 +57,7 @@ const DesktopMenu: React.FC = () => {
       </div>
       <div className="flex flex-row gap-10 items-center justify-center mr-10 text-[20px] font-[600]">
         {Object.entries(NAV_ROUTES).map(([key, value]) => (
-          <Link href={value}>
+          <Link key={value} href={value}>
             <div className="text-black">{key}</div>
           </Link>
         ))}
