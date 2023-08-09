@@ -41,12 +41,12 @@ const content: IContent[] = [
 const Blogs: React.FC = () => {
   return (
     <>
-      <div className="bg-blogs background-contrast-50 h-screen w-screen bg-fixed relative">
-        <div className="bg-primary h-full w-full flex justify-center items-center absolute opacity-75"></div>
+      <div className="bg-blogs background-contrast-50 h-screen w-full bg-fixed relative">
+        <div className="bg-primary h-full w-full flex justify-center items-center absolute opacity-75 overflow-hidden"></div>
         <div className=" absolute w-full h-full flex justify-center items-center ">
           <div className="-mb-[300px] shadow-xl flex flex-col gap-20">
             <h1 className=" text-[80px] text-white font-extrabold ">Blogs</h1>
-            <div className="h-[700px] w-[1100px] bg-white flex justify-start items-center gap-9">
+            <div className="h-[700px] w-full bg-white flex justify-start items-center gap-9">
               {/* main display */}
               <div className="h-[600px] w-[400px] ml-9 p-8">
                 <div className="flex justify-center items-center flex-col gap-8">
