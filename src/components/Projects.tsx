@@ -47,7 +47,7 @@ const Projects: React.FC = () => {
   return (
     <div className=" flex justify-center items-center mt-[5rem]">
       <div className="relative w-full h-[300px] md:w-[1100px] md:h-[700px] flex flex-col justify-between items-start ">
-        <h1 className="font-extrabold text-[80px] text-primary">
+        <h1 className="font-extrabold text-6xl text-primary">
           Featured Work
         </h1>
         <div ref={sliderRef} className="h-full keen-slider mt-5 ">
@@ -63,7 +63,7 @@ const Projects: React.FC = () => {
                   alt=""
                 />
               </div>
-              <div className="text-3xl font-bold text-black h-[300px] w-[600px] text-center shadow drop-shadow-lg absolute top-[15rem] right-6 rounded-[10px] bg-light">
+              <div className="text-xl font-bold text-black h-[300px] w-[600px] text-center shadow drop-shadow-lg absolute top-[15rem] right-6 rounded-[10px] bg-light">
                 <h1>{item.heading}</h1>
                 <p>{item.text}</p>
               </div>

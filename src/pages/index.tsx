@@ -10,8 +10,8 @@ export default function Home() {
     <Layout>
       <ImageCarousel />
       <Projects />
-      <Clients />
       <Blogs />
+      <Clients />
       <News />
       <ProjectsHandled />
     </Layout>

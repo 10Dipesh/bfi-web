@@ -30,7 +30,7 @@ const Content: IContent[] = [
     image: "/images/bfi4.jpg",
   },
 ];
-const ImageCarousel:React.FC = () => {
+const ImageCarousel: React.FC = () => {
   const [sliderRef] = useKeenSlider(
     {
       loop: true,
@@ -44,12 +44,25 @@ const ImageCarousel:React.FC = () => {
   );
 
   return (
-    <div className="relative h-[600px] flex justify-center items-center gap-4 bg-primary">
-      <div className="w-[1000px] h-[500px] flex flex-col justify-center items-center ml-8 gap-10">
-        <h1 className="font-extrabold text-[80px] leading-[80px] text-white">
+    <div className=" h-[800px] flex justify-center items-center gap-4 bg-primary mt-[40px]">
+      <div className="w-[60%] h-[500px] flex flex-col justify-center items-center ml-8 gap-10 px-20">
+        <h1 className="font-extrabold text-6xl leading-[70px] text-white text-center">
           Bright <span className="text-green">Future</span> International Pvt.
           Ltd.
         </h1>
+        <p className="text-xl text-white">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+          aliquam incidunt neque sunt ad dolorum corrupti similique
+          necessitatibus vero vel, non alias tenetur dicta omnis enim, delectus
+          deserunt repellendus. Praesentium. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Expedita ipsa eos illum voluptate,
+          incidunt veritatis itaque quos corporis perspiciatis necessitatibus,
+          totam aut delectus molestiae ex error consequatur cum! Nihil, dolores.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus saepe
+          veritatis sequi quidem sint, corrupti dignissimos ipsam, explicabo
+          maiores quisquam nulla? Mollitia, aspernatur reprehenderit numquam
+          facilis nobis repudiandae nesciunt deleniti?
+        </p>
         <div className="flex justify-start items-start gap-8 mt-11">
           <Link href="/projects">
             <button
@@ -66,14 +79,16 @@ const ImageCarousel:React.FC = () => {
           </Link>
         </div>
       </div>
+      <div className="relative flex-1 ">
+      <div className="absolute h-[400px] w-[600px] bg-light opacity-80 top-[-2rem] left-[-2rem]"></div>
       <div
         ref={sliderRef}
-        className="keen-slider !h-[400px] !w-[600px] shadow shadow-black/60 dark:shadow-black/70 mr-7"
+        className="keen-slider !h-[400px] !w-[600px] shadow shadow-black/60 dark:shadow-black/70 mr-7 absolute"
       >
         {Content.map((item, index) => (
-          <div className="  keen-slider__slide" key={index}>
+          <div className="  keen-slider__slide " key={index}>
             <img
-              className="w-full h-full object-cover absolute"
+              className="w-full h-full object-cover absolute hover:scale-125 transition-all duration-200 ease-linear cursor-pointer"
               src={item.image}
               alt=""
             />
@@ -82,6 +97,7 @@ const ImageCarousel:React.FC = () => {
             </div> */}
           </div>
         ))}
+      </div>
       </div>
     </div>
   );
