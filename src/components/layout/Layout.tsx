@@ -8,7 +8,7 @@ const Layout: React.FC<ILayoutProps> = ({ children }) => {
   return (
     <div className="min-h-screen font-Ysabeau container mx-auto">
       <Navbar />
-      <div>{children}</div>
+      <div className="mt-24">{children}</div>
       <Footer/>
     </div>
   );

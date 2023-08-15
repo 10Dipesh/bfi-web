@@ -76,6 +76,7 @@ const ImageCarousel: React.FC = () => {
             <button className="px-9 py-4 font-semibold text-[20px] text-center rounded-[40px] hover:shadow hover:drop-shadow-lg hover:bg-white hover:text-black text-white">
               Learn about us
             </button>
+            
           </Link>
         </div>
       </div>

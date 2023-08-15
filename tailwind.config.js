@@ -15,7 +15,7 @@ module.exports = {
       },
     },
     fontFamily:{
-      'Ysabeau':['Ysabeau Office', 'sans-serif']
+      'Ysabeau':['Montserrat', 'sans-serif']
     },
     colors: {
       'primary': '#0275c8;',

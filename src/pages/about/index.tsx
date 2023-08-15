@@ -89,7 +89,7 @@ export const About: React.FC = () => {
           />
         </div>
         <div className="flex-1 p-20">
-          <h1 className="text-6xl font-semibold shadow-xl">
+          <h1 className="text-6xl font-semibold">
             About Organization
           </h1>
           <p className="mt-10 text-xl">
@@ -120,7 +120,7 @@ export const About: React.FC = () => {
               </div>
               <h2>{item.name}</h2>
               <p>{item.position}</p>
-             <a href="mailto:{item.gmail}">{item.gmail}</a>
+             <a className="hover:underline" href="mailto:{item.gmail}">{item.gmail}</a>
             </div>
           ))}
         </div>
