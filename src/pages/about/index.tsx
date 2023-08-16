@@ -1,7 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import Image from "next/image";
-import Link from "next/link";
-
+import Container from "@/components/layout/Container";
 interface IContent {
   image: string;
   name: string;
@@ -51,34 +50,40 @@ const content: IContent[] = [
 export const About: React.FC = () => {
   return (
     <Layout>
-      <div className="h-[500px] flex mt-[70px] px-[20px] gap-10 bg-primary">
-        <div className="w-[60%] flex flex-col justify-start items-start gap-10 p-24">
-          <h1 className="text-5xl font-extrabold leading-none text-center text-white">
-            Bright Future International Private Limited.
-          </h1>
-          <p className="text-xl leading-none text-start text-white mt-12">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Voluptatibus ipsa tenetur doloremque, omnis repellendus numquam,
-            dolores exercitationem non quae nostrum, est nobis voluptates dicta
-            nisi necessitatibus. Odit accusamus perspiciatis ipsum.\ Lorem
-            ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate,
-            commodi distinctio. Odit aut reprehenderit rerum praesentium quo
-            provident, fuga ad omnis necessitatibus id? Illum, pariatur
-            voluptates dolorum saepe deserunt consequuntur.
-          </p>
-        </div>
-        <div className="flex-1 relative mt-[50px]">
-          <div className=" absolute w-[470px] h-[85%] top-2 bg-light opacity-80"></div>
-          <div>
-            <img
-              src="/images/bg_2.jpg"
-              alt=""
-              className="absolute w-full h-full object-cover p-9"
-            />
+      <div className="h-[500px] bg-primary">
+        <Container>
+          <div className="flex mt-[70px] px-[20px] gap-10 ">
+            <div className="w-[60%] flex flex-col justify-start items-start gap-10 p-24">
+              <h1 className="text-5xl font-extrabold leading-none text-center text-white">
+                Bright Future International Private Limited.
+              </h1>
+              <p className="text-xl leading-none text-start text-white mt-12">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Voluptatibus ipsa tenetur doloremque, omnis repellendus numquam,
+                dolores exercitationem non quae nostrum, est nobis voluptates
+                dicta nisi necessitatibus. Odit accusamus perspiciatis ipsum.\
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Cupiditate, commodi distinctio. Odit aut reprehenderit rerum
+                praesentium quo provident, fuga ad omnis necessitatibus id?
+                Illum, pariatur voluptates dolorum saepe deserunt consequuntur.
+              </p>
+            </div>
+            <div className="flex-1 relative mt-[50px]">
+              <div className=" absolute w-[470px] h-[85%] top-2 bg-light opacity-80"></div>
+              <div>
+                <img
+                  src="/images/bg_2.jpg"
+                  alt=""
+                  className="absolute w-full h-full object-cover p-9"
+                />
+              </div>
+            </div>
           </div>
-        </div>
+        </Container>
       </div>
-      <div className="w-full h-[500px] flex justify-center items-center">
+      <div className="w-full h-[500px]">
+      <Container>
+      <div className=" flex justify-center items-center">
         <div className="w-[30%] full">
           <Image
             src="/images/bfi6.jpg"
@@ -89,9 +94,7 @@ export const About: React.FC = () => {
           />
         </div>
         <div className="flex-1 p-20">
-          <h1 className="text-6xl font-semibold">
-            About Organization
-          </h1>
+          <h1 className="text-6xl font-semibold">About Organization</h1>
           <p className="mt-10 text-xl">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
             maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -106,7 +109,10 @@ export const About: React.FC = () => {
           </p>
         </div>
       </div>
+      </Container>
+      </div>
       {/* our teams */}
+      <Container>
       <div className="h-auto w-full flex flex-col justify-center items-center gap-10">
         <h1 className="text-5xl font-extrabold">Board of Directors</h1>
         <div className=" grid grid-cols-4 gap-4">
@@ -120,12 +126,15 @@ export const About: React.FC = () => {
               </div>
               <h2>{item.name}</h2>
               <p>{item.position}</p>
-             <a className="hover:underline" href="mailto:{item.gmail}">{item.gmail}</a>
+              <a className="hover:underline" href="mailto:{item.gmail}">
+                {item.gmail}
+              </a>
             </div>
           ))}
         </div>
       </div>
-  {/* location */}
+      </Container>
+      {/* location */}
       <div>
         <p>Location</p>
       </div>

@@ -14,16 +14,19 @@ const MobileMenu: React.FC = () => {
           onClick={() => setIsOpen(!isOpen)}
         >
           <span
-            className={`h-1 w-full transform cursor-pointer rounded-lg bg-black transition duration-300 ease-in-out group-hover:text-red ${isOpen ? "translate-y-2.5 rotate-45" : ""
-              }`}
+            className={`h-1 w-full transform cursor-pointer rounded-lg bg-black transition duration-300 ease-in-out group-hover:text-red ${
+              isOpen ? "translate-y-2.5 rotate-45" : ""
+            }`}
           ></span>
           <span
-            className={`h-1 w-full transform cursor-pointer rounded-lg bg-black transition duration-300 ease-in-out group-hover:text-red ${isOpen ? "w-0 opacity-0" : "w-full"
-              }`}
+            className={`h-1 w-full transform cursor-pointer rounded-lg bg-black transition duration-300 ease-in-out group-hover:text-red ${
+              isOpen ? "w-0 opacity-0" : "w-full"
+            }`}
           ></span>
           <span
-            className={`group-hover:text-red-500 h-1 w-full transform cursor-pointer rounded-lg bg-black transition duration-300 ease-in-out ${isOpen ? "-translate-y-2.5 -rotate-45" : ""
-              }`}
+            className={`group-hover:text-red-500 h-1 w-full transform cursor-pointer rounded-lg bg-black transition duration-300 ease-in-out ${
+              isOpen ? "-translate-y-2.5 -rotate-45" : ""
+            }`}
           ></span>
         </div>
       </div>
@@ -43,7 +46,7 @@ const MobileMenu: React.FC = () => {
 };
 const DesktopMenu: React.FC = () => {
   return (
-    <nav className="w-full h-[78px] fixed z-10 bg-white shadow-md md:flex justify-between items-center">
+    <nav className="w-full fixed z-10 h-[78px] bg-white shadow-md md:flex justify-between items-center">
       <Container>
         <div className="hidden md:flex justify-between">
           <div className="px-6 ml-6">
@@ -51,7 +54,7 @@ const DesktopMenu: React.FC = () => {
               <img
                 src="/images/BFI-logo.ico"
                 alt="logo"
-              className="h-10 w-24"
+                className="h-10 w-24"
               />
             </Link>
           </div>

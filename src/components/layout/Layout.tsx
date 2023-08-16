@@ -8,8 +8,8 @@ const Layout: React.FC<ILayoutProps> = ({ children }) => {
   return (
     <main className="min-h-screen">
       <Navbar />
-      <div>{children}</div>
-      <Footer/>
+      <div className="mt-10">{children}</div>
+      <Footer />
     </main>
   );
 };

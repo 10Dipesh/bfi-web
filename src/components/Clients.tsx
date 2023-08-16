@@ -1,6 +1,7 @@
 import React from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
+import Container from "./layout/Container";
 interface IContent {
   text: string;
   image: string;
@@ -77,9 +78,11 @@ const Clients: React.FC = () => {
     ]
   );
   return (
-    <div className="w-full h-600px mt-10 flex flex-col justify-center items-center gap-[5rem]">
+    <div className="w-full h-600px mt-10 bg-black">
+      <Container>
+        <div className="flex flex-col justify-center items-center gap-[5rem]">
       <h1>Our happy clients</h1>
-    <div ref={sliderRef} className="keen-slider h-[300px] bg-black">
+    <div ref={sliderRef} className="keen-slider h-[300px] ">
       {
       content.map((item, index) => (
         <div className="keen-slider__slide number-slide flex justify-center items-center">
@@ -88,6 +91,8 @@ const Clients: React.FC = () => {
       ))
     }
     </div>
+    </div>
+    </Container>
     </div>
   );
 };

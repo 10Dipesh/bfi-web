@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
+import Container from "./layout/Container";
 
 interface IContent {
   // text: (() => JSX.Element) | string;
@@ -44,9 +45,11 @@ const ImageCarousel: React.FC = () => {
   );
 
   return (
-    <div className=" h-[800px] flex justify-center items-center gap-4 bg-primary mt-[40px]">
+    <div className="h-[850px] bg-primary flex justify-center items-center">
+      <Container>
+        <div className="flex justify-center items-center gap-4 mt-[40px]">
       <div className="w-[60%] h-[500px] flex flex-col justify-center items-center ml-8 gap-10 px-20">
-        <h1 className="font-extrabold text-6xl leading-[70px] text-white text-center">
+        <h1 className="font-extrabold text-6xl leading-[70px] text-white text-start">
           Bright <span className="text-green">Future</span> International Pvt.
           Ltd.
         </h1>
@@ -100,6 +103,8 @@ const ImageCarousel: React.FC = () => {
         ))}
       </div>
       </div>
+      </div>
+      </Container>
     </div>
   );
 };

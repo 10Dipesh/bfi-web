@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Layout from "@/components/layout/Layout";
 import projectList from "@/data/projectList";
 import Link from "next/link";
+import Container from "@/components/layout/Container";
 const Projects: React.FC = () => {
   const [selectStatus, setSelectStatus] = useState("all");
   const updateSelectStatus = (newStatus: string) => {
@@ -17,7 +18,9 @@ const Projects: React.FC = () => {
 
   return (
     <Layout>
-      <div className="h-[1200px] w-full flex flex-col gap-10 pt-[6rem] bg-primary">
+      <div className="h-[1200px] w-full bg-primary">
+        <Container>
+          <div className="flex flex-col gap-10 pt-[6rem]">
         <div className="ml-10">
           <label
             htmlFor="statusFilter"
@@ -63,6 +66,8 @@ const Projects: React.FC = () => {
             </Link>
           ))}
         </div>
+        </div>
+        </Container>
       </div>
     </Layout>
   );

@@ -39,7 +39,7 @@ const content: IContent[] = [
 ];
 const BlogsInnerSection:React.FC = () =>{
     return (
-        <div className=" absolute w-full h-full flex justify-center items-start ">
+        <div className=" absolute w-full h-full flex justify-center items-start">
         <div className="shadow-xl flex flex-col gap-20 mt-10">
           <h1 className=" text-6xl text-white font-extrabold ">Blogs</h1>
           <div className="h-[700px] w-full bg-white flex justify-start items-center gap-9">
@@ -49,7 +49,7 @@ const BlogsInnerSection:React.FC = () =>{
                 <div className="shadow-xl rounded-xl overflow-hidden">
                   <img src={content[0].image} alt="" />
                 </div>
-                <div className="flex flex-col gap-4">
+                <article className="flex flex-col gap-4">
                   <div className="flex justify-start items-center flex-row">
                     <p className="text-[20px]">{content[0].text}</p>
                     <p>{content[0].date}</p>
@@ -61,7 +61,7 @@ const BlogsInnerSection:React.FC = () =>{
                     similique labore unde in inventore, excepturi doloribus
                     qui tenetur veritatis! Quo perferendis natus sit.
                   </h2>
-                </div>
+                </article>
               </div>
             </div>
             {/* second display */}
@@ -72,13 +72,13 @@ const BlogsInnerSection:React.FC = () =>{
                     <div className="shadow-xl rounded-xl">
                       <Image src={item.image} alt="" width={150} height={200}/>
                     </div>
-                    <div>
+                    <article>
                       <div>
                         <p className="text-xl text-[#F2864A]">{item.text}</p>
                         <p>{item.date}</p>
                       </div>
                       <h1 className="text-xl">{item.heading}</h1>
-                    </div>
+                    </article>
                   </div>
                 </div>
               ))}
