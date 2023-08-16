@@ -6,11 +6,11 @@ interface ILayoutProps {
 
 const Layout: React.FC<ILayoutProps> = ({ children }) => {
   return (
-    <div className="min-h-screen font-Ysabeau container mx-auto">
+    <main className="min-h-screen">
       <Navbar />
-      <div className="mt-24">{children}</div>
+      <div>{children}</div>
       <Footer/>
-    </div>
+    </main>
   );
 };
 

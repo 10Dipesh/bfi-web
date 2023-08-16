@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NAV_ROUTES } from "../constants";
 import Link from "next/link";
 import Image from "next/image";
+import Container from "./layout/Container";
 
 const MobileMenu: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,19 +14,16 @@ const MobileMenu: React.FC = () => {
           onClick={() => setIsOpen(!isOpen)}
         >
           <span
-            className={`h-1 w-full transform cursor-pointer rounded-lg bg-black transition duration-300 ease-in-out group-hover:text-red ${
-              isOpen ? "translate-y-2.5 rotate-45" : ""
-            }`}
+            className={`h-1 w-full transform cursor-pointer rounded-lg bg-black transition duration-300 ease-in-out group-hover:text-red ${isOpen ? "translate-y-2.5 rotate-45" : ""
+              }`}
           ></span>
           <span
-            className={`h-1 w-full transform cursor-pointer rounded-lg bg-black transition duration-300 ease-in-out group-hover:text-red ${
-              isOpen ? "w-0 opacity-0" : "w-full"
-            }`}
+            className={`h-1 w-full transform cursor-pointer rounded-lg bg-black transition duration-300 ease-in-out group-hover:text-red ${isOpen ? "w-0 opacity-0" : "w-full"
+              }`}
           ></span>
           <span
-            className={`group-hover:text-red-500 h-1 w-full transform cursor-pointer rounded-lg bg-black transition duration-300 ease-in-out ${
-              isOpen ? "-translate-y-2.5 -rotate-45" : ""
-            }`}
+            className={`group-hover:text-red-500 h-1 w-full transform cursor-pointer rounded-lg bg-black transition duration-300 ease-in-out ${isOpen ? "-translate-y-2.5 -rotate-45" : ""
+              }`}
           ></span>
         </div>
       </div>
@@ -45,23 +43,27 @@ const MobileMenu: React.FC = () => {
 };
 const DesktopMenu: React.FC = () => {
   return (
-    <nav className=" w-full h-[78px] fixed z-10 bg-white hidden md:flex justify-between shadow-md">
-      <div className="px-6 ml-6">
-        <Image
-          src="/images/BFI-logo.ico"
-          alt="logo"
-          width={50}
-          height={20}
-          className="object-contain"
-        />
-      </div>
-      <div className="flex flex-row gap-10 items-center justify-center mr-10 text-l">
-        {Object.entries(NAV_ROUTES).map(([key, value]) => (
-          <Link key={value} href={value}>
-            <div className="text-black">{key}</div>
-          </Link>
-        ))}
-      </div>
+    <nav className="w-full h-[78px] fixed z-10 bg-white shadow-md md:flex justify-between items-center">
+      <Container>
+        <div className="hidden md:flex justify-between">
+          <div className="px-6 ml-6">
+            <Link href={"/"}>
+              <img
+                src="/images/BFI-logo.ico"
+                alt="logo"
+              className="h-10 w-24"
+              />
+            </Link>
+          </div>
+          <div className="flex flex-row gap-16 items-center justify-center mr-10">
+            {Object.entries(NAV_ROUTES).map(([key, value]) => (
+              <Link key={value} href={value}>
+                <div className="text-black">{key}</div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </Container>
     </nav>
   );
 };
