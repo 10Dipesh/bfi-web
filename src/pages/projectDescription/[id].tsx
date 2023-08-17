@@ -2,23 +2,38 @@ import Layout from "@/components/layout/Layout";
 import projectList, { IContent } from "@/data/projectList";
 import { GetServerSideProps } from "next";
 import Container from "@/components/layout/Container";
+import Image from "next/image";
 
 const ProjectsDescription: React.FC<IProps> = ({ project }) => {
   return (
     <Layout>
-      <Container>
-      <div>
-        <img src={project?.image_1} alt="" />
+      <div className="mt-[90px] flex md:justify-between md:items-center">
+        <Container>
+          <section className="flex flex-col justify-center items-center relative ml-28">
+            <div className="h-[150px] w-[1000px] bg-primary md:-mr-[15.6rem]">
+              <h1 className="text-4xl font-bold text-white">
+                {project?.heading}
+              </h1>
+            </div>
+            <div className="h-[350px] w-[800px] absolute bg-primary -z-10 left-0 bottom-0 opacity-40"></div>
+            <div className="top-10">
+              <img src={project?.image_1} alt="" className="h-[500px] w-[1250px] object-cover"/>
+            </div>
+          </section>
+          <section className="mx-[6.4rem]">
+          <h2 className="text-xl font-semibold bg-primary text-white w-56 px-4 rounded-xl mt-10">
+            About the project
+          </h2>
+          <div className="mt-10 bg-light rounded-xl p-4">
+            <p className="text-sm">{project?.description_1}</p>
+          </div>
+            <div className="mt-10">
+              <img src={project?.image_2} alt="" />
+            </div>
+            <p className="mt-10 bg-light rounded-xl p-4 text-sm mb-10">{project?.description_2}</p>
+          </section>
+        </Container>
       </div>
-      <h1>{project?.heading}</h1>
-      <article>
-      <p>{project?.description_1}</p>
-      </article>
-      <div>
-        <img src={project?.image_2} alt="" />
-      </div>
-      <p>{project?.description_2}</p>
-      </Container>
     </Layout>
   );
 };
