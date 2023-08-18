@@ -18,13 +18,13 @@ const Projects: React.FC = () => {
 
   return (
     <Layout>
-      <div className="h-[1200px] w-full bg-primary">
+      <div className="h-[1200px] w-full bg-light">
         <Container>
           <div className="flex flex-col gap-10 pt-[6rem]">
         <div className="ml-10">
           <label
             htmlFor="statusFilter"
-            className="block font-bold mb-2 text-2xl text-white"
+            className="block font-bold mb-2 text-2xl text-black"
           >
             Filter by Status:
           </label>

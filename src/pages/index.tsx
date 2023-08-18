@@ -13,7 +13,7 @@ export default function Home() {
       <Blogs />
       <Clients />
       <News />
-      <ProjectsHandled />
+      {/* <ProjectsHandled /> */}
     </Layout>
   );
 }

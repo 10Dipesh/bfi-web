@@ -2,7 +2,6 @@ import Layout from "@/components/layout/Layout";
 import projectList, { IContent } from "@/data/projectList";
 import { GetServerSideProps } from "next";
 import Container from "@/components/layout/Container";
-import Image from "next/image";
 
 const ProjectsDescription: React.FC<IProps> = ({ project }) => {
   return (
