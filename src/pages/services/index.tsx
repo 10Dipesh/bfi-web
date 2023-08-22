@@ -30,11 +30,11 @@ const Services: React.FC = () => {
               consulting Services in various fields.</span>
             </p>
           </header>
-          <section className="h-[800px] bg-light shadow-xl mt-8 flex justify-center items-center">
-            <div className="relative grid grid-cols-3 gap-6">
+          <section className=" h- md:h-[800px] bg-light shadow-xl mt-8 flex justify-center items-center">
+            <div className="relative grid grid-cols-2 md:grid-cols-3 gap-6 my-4">
               {servicesList.map((item) => (
                 <div
-                  className=" w-80 h-80 relative mx-10 shadow-xl"
+                  className="h-60 w-56 md:w-80 md:h-80 relative md:mx-10 shadow-xl"
                   onMouseEnter={() => handleMouseEnter(item.id)}
                   onMouseLeave={handleMouseLeave}
                   key={item.id}

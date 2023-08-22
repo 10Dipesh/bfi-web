@@ -48,25 +48,25 @@ const Projects: React.FC = () => {
   return (
     <div className="mt-10">
       <Container>
-        <div className="mx-24">
-          <div className="relative w-full h-[300px] md:w-[1100px] md:h-[700px] flex flex-col justify-start items-start ">
-            <h1 className="font-extrabold text-6xl text-primary">
+        <div className="mx-12">
+          <div className="relative w-full h-[300px] md:w-[1100px] md:h-[700px]">
+            <h1 className="font-extrabold text-5xl text-primary">
               Featured Work
             </h1>
-            <div ref={sliderRef} className="h-full keen-slider mt-5 ">
+            <div ref={sliderRef} className="!h-full !w-full keen-slider mt-5">
               {Content.map((item, index) => (
                 <div
-                  className="keen-slider__slide flex justify-center items-center gap-7"
+                  className="keen-slider__slide gap-7"
                   key={index}
                 >
-                  <div className="absolute left-4 top-20 h-[300px] w-[500px] shadow drop-shadow-xl rounded-[20px] overflow-hidden ">
+                  <div className=" h-[300px] w-[500px] shadow drop-shadow-xl rounded-xl overflow-hidden ">
                     <img
                       className="w-full h-full object-cover "
                       src={item.image}
                       alt=""
                     />
                   </div>
-                  <div className="text-xl font-bold text-black h-[300px] w-[600px] text-center shadow drop-shadow-lg absolute top-[15rem] right-6 rounded-[10px] bg-light">
+                  <div className="text-xl font-bold text-black h-[300px] w-[600px] text-center shadow drop-shadow-lg absolute top-[15rem] rounded-xl bg-light">
                     <h1>{item.heading}</h1>
                     <p>{item.text}</p>
                   </div>

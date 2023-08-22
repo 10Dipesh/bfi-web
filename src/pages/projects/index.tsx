@@ -39,14 +39,14 @@ const Projects: React.FC = () => {
             <option value="COMPLETED">Completed</option>
           </select>
         </div>
-        <div className="grid grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-4 gap-8">
           {filterProject.map((item) => (
             <Link key={item.id} href={`/projectDescription/${item.id}`}>
               <div
                 key={item.id}
-                className=" bg-white h-[400px] w-[300px] flex flex-col justify-start items-start shadow-xl mx-10 rounded-tl-lg rounded-b-lg overflow-hidden"
+                className=" bg-white md:h-[400px] w-[300px]flex-col justify-start items-start shadow-xl mx-10 rounded-tl-lg rounded-b-lg overflow-hidden"
               >
-                <img src={item.image_1} alt="" />
+                <img src={item.image_1} alt="" className="hidden md:block"/>
                 <div className="ml-5">
                 <div
                   className={`border-2 border-primary w-2/4 rounded-xl text-center my-5 ${
@@ -60,7 +60,7 @@ const Projects: React.FC = () => {
                   {item.status}
                 </div>
                 <h1 className="text-xl font-semibold">{item.heading}</h1>
-                <p className="truncate w-64 text-lg">{item.description_1}</p>
+                <p className="truncate w-64 text-sm">{item.description_1}</p>
               </div>
               </div>
             </Link>

@@ -45,15 +45,15 @@ const ImageCarousel: React.FC = () => {
   );
 
   return (
-    <div className="h-[850px] bg-primary flex justify-center items-center">
+    <div className="h-[400px] flex-col md:h-[800px] bg-primary flex justify-center items-center">
       <Container>
-        <div className="flex justify-center items-center gap-4 mt-[40px]">
-      <div className="w-[60%] h-[500px] flex flex-col justify-center items-center ml-8 gap-10 px-20">
-        <h1 className="font-extrabold text-6xl leading-[70px] text-white text-start">
+        <div className="flex md:flex-row justify-center items-center gap-4 mx-12">
+      <div className="absolute z-10 md:relative w-[60%] h-[500px] flex flex-col justify-center items-center gap-10 pr-14">
+        <h1 className="font-extrabold md:text-5xl text-white text-start">
           Bright <span className="text-green">Future</span> International Pvt.
           Ltd.
         </h1>
-        <p className="text-xl text-white">
+        <p className="text-lg text-white hidden md:block text-left">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
           aliquam incidunt neque sunt ad dolorum corrupti similique
           necessitatibus vero vel, non alias tenetur dicta omnis enim, delectus
@@ -66,20 +66,19 @@ const ImageCarousel: React.FC = () => {
           maiores quisquam nulla? Mollitia, aspernatur reprehenderit numquam
           facilis nobis repudiandae nesciunt deleniti?
         </p>
-        <div className="flex justify-start items-start gap-8 mt-11">
+        <div className="w-full flex justify-start items-start gap-8 mt-11">
           <Link href="/projects">
             <button
               type="button"
-              className=" px-9 py-4 bg-[#F2864A] rounded-[40px] font-semibold text-[20px] text-center shadow drop-shadow-lg hover:bg-green hover:text-white"
+              className=" px-8 py-4 bg-[#F2864A] rounded-[40px] font-semibold inline-flex md:text-lg text-center shadow drop-shadow-lg hover:bg-green hover:text-white"
             >
               Our Work
             </button>
           </Link>
           <Link href="/about">
-            <button className="px-9 py-4 font-semibold text-[20px] text-center rounded-[40px] hover:shadow hover:drop-shadow-lg hover:bg-white hover:text-black text-white">
+            <button className="px-8 py-4 font-semibold text-lg text-center rounded-[40px] hover:shadow hover:drop-shadow-lg hover:bg-white hover:text-black text-white">
               Learn about us
             </button>
-            
           </Link>
         </div>
       </div>
@@ -87,7 +86,7 @@ const ImageCarousel: React.FC = () => {
       <div className="absolute h-[400px] w-[600px] bg-light opacity-80 top-[-2rem] left-[-2rem]"></div>
       <div
         ref={sliderRef}
-        className="keen-slider !h-[400px] !w-[600px] shadow shadow-black/60 dark:shadow-black/70 mr-7 absolute"
+        className="keen-slider h-full w-full md:!h-[400px] md:!w-[600px] shadow shadow-black/60 dark:shadow-black/70 absolute"
       >
         {Content.map((item, index) => (
           <div className="  keen-slider__slide " key={index}>

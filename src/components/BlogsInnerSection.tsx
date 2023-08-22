@@ -41,7 +41,7 @@ const BlogsInnerSection:React.FC = () =>{
     return (
         <div className=" absolute w-full h-full flex justify-center items-start">
         <div className="shadow-xl flex flex-col gap-20 mt-10">
-          <h1 className=" text-6xl text-white font-extrabold ">Blogs</h1>
+          <h1 className=" text-5xl text-white font-extrabold ">Blogs</h1>
           <div className="h-[700px] w-full bg-white flex justify-start items-center gap-9">
             {/* main display */}
             <div className="h-[600px] w-[500px] ml-9 p-8">
@@ -51,11 +51,11 @@ const BlogsInnerSection:React.FC = () =>{
                 </div>
                 <article className="flex flex-col gap-4">
                   <div className="flex justify-start items-center flex-row">
-                    <p className="text-[20px]">{content[0].text}</p>
+                    <p className="text-lg">{content[0].text}</p>
                     <p>{content[0].date}</p>
                   </div>
-                  <h1 className="text-[40px] font-semibold leading-9">{content[0].heading}</h1>
-                  <h2>
+                  <h1 className="text-2xl font-semibold">{content[0].heading}</h1>
+                  <h2 className="text-sm">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Tempora autem itaque saepe incidunt quae pariatur odit
                     similique labore unde in inventore, excepturi doloribus
@@ -74,8 +74,8 @@ const BlogsInnerSection:React.FC = () =>{
                     </div>
                     <article>
                       <div>
-                        <p className="text-xl text-[#F2864A]">{item.text}</p>
-                        <p>{item.date}</p>
+                        <p className="text-lg text-[#F2864A]">{item.text}</p>
+                        <p className="text-sm">{item.date}</p>
                       </div>
                       <h1 className="text-xl">{item.heading}</h1>
                     </article>

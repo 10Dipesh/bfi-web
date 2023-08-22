@@ -8,13 +8,13 @@ const ProjectsDescription: React.FC<IProps> = ({ project }) => {
     <Layout>
       <div className="mt-[90px] flex md:justify-between md:items-center">
         <Container>
-          <section className="flex flex-col justify-center items-center relative ml-28">
-            <div className="h-[150px] w-[1000px] bg-primary md:-mr-[15.6rem]">
+          <section className="flex flex-col justify-center items-center relative md:ml-28">
+            <div className="h-[150px] w-full md:w-[1000px] bg-primary md:-mr-[15.6rem]">
               <h1 className="text-4xl font-bold text-white">
                 {project?.heading}
               </h1>
             </div>
-            <div className="h-[350px] w-[800px] absolute bg-primary -z-10 left-0 bottom-0 opacity-40"></div>
+            <div className="hidden md:block h-[350px] w-[800px] absolute bg-primary -z-10 left-0 bottom-0 opacity-40"></div>
             <div className="top-10">
               <img src={project?.image_1} alt="" className="h-[500px] w-[1250px] object-cover"/>
             </div>

@@ -7,7 +7,8 @@ import Container from "./layout/Container";
 const MobileMenu: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <>
+    <div>
+    <Container>
       <div className="flex w-11/12 items-center justify-end">
         <div
           className="group relative z-50 flex h-6 w-6 cursor-pointer flex-col items-center justify-between md:hidden "
@@ -31,7 +32,7 @@ const MobileMenu: React.FC = () => {
         </div>
       </div>
       {isOpen && (
-        <div className="fixed flex justify-center item-center flex-col gap-5 top-0 h-full w-full bg-white z-10">
+        <div className=" flex justify-center item-center flex-col gap-5 top-0 h-full w-full bg-white z-10">
           {Object.entries(NAV_ROUTES).map(([key, value]) => (
             <Link href={value} key={key}>
               <div onClick={() => setIsOpen(false)} className="text-red">
@@ -41,7 +42,8 @@ const MobileMenu: React.FC = () => {
           ))}
         </div>
       )}
-    </>
+    </Container>
+    </div>
   );
 };
 const DesktopMenu: React.FC = () => {
