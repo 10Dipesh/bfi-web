@@ -19,7 +19,7 @@ const ProjectsDescription: React.FC<IProps> = ({ project }) => {
               <img src={project?.image_1} alt="" className="h-[500px] w-[1250px] object-cover"/>
             </div>
           </section>
-          <section className="mx-[6.4rem]">
+          <section className=" mx-2 md:mx-[6.4rem]">
           <h2 className="text-xl font-semibold bg-primary text-white w-56 px-4 rounded-xl mt-10">
             About the project
           </h2>
