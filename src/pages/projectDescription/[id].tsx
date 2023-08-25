@@ -14,7 +14,7 @@ const ProjectsDescription: React.FC<IProps> = ({ project }) => {
                 {project?.heading}
               </h1>
             </div>
-            <div className="hidden md:block h-[350px] w-[800px] absolute bg-primary -z-10 left-0 bottom-0 opacity-40"></div>
+            <div className="hidden md:block h-[350px] w-[800px] absolute bg-primary -z-10 left-0 bottom-0 opacity-40 animate-bounce"></div>
             <div className="top-10">
               <img src={project?.image_1} alt="" className="h-[500px] w-[1250px] object-cover"/>
             </div>

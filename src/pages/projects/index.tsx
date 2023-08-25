@@ -18,10 +18,10 @@ const Projects: React.FC = () => {
 
   return (
     <Layout>
-      <div className="h-[1200px] w-full bg-light">
+      <div className="h-auto w-full bg-light">
         <Container>
-          <div className="flex flex-col gap-10 pt-[6rem]">
-        <div className="ml-10">
+          <div className="flex flex-col gap-10 pt-[6rem] mx-14">
+        <div>
           <label
             htmlFor="statusFilter"
             className="block font-bold mb-2 text-2xl text-black"
@@ -39,12 +39,12 @@ const Projects: React.FC = () => {
             <option value="COMPLETED">Completed</option>
           </select>
         </div>
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-4 gap-9 mb-9">
           {filterProject.map((item) => (
             <Link key={item.id} href={`/projectDescription/${item.id}`}>
               <div
                 key={item.id}
-                className=" bg-white md:h-[400px] w-[300px]flex-col justify-start items-start shadow-xl mx-10 rounded-tl-lg rounded-b-lg overflow-hidden"
+                className=" bg-white md:h-[400px] w-[300px]flex-col justify-start items-start shadow-xl rounded-tl-lg rounded-b-lg overflow-hidden"
               >
                 <img src={item.image_1} alt="" className="hidden md:block"/>
                 <div className="ml-5">

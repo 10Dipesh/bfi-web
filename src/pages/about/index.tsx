@@ -50,14 +50,14 @@ const content: IContent[] = [
 export const About: React.FC = () => {
   return (
     <Layout>
-      <div className="md:h-[500px] w-full bg-primary">
+      <div className="md:h-[564px] w-full bg-primary">
         <Container>
           <div className="flex flex-col md:flex-row mt-[70px] md:px-[20px] gap-10 ">
             <div className="w-[60%] flex md:flex-col justify-start items-start md:gap-10 pt-4 md:p-24">
-              <h1 className="text-5xl font-extrabold leading-none text-start md:text-center text-white">
+              <h1 className="text-5xl font-extrabold md:text-left text-white">
                 Bright Future International Private Limited.
               </h1>
-              <p className="hidden md:block text-xl leading-none text-start text-white mt-12">
+              <p className="hidden md:block text-xl text-start text-white mt-12">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Voluptatibus ipsa tenetur doloremque, omnis repellendus numquam,
                 dolores exercitationem non quae nostrum, est nobis voluptates
@@ -84,7 +84,7 @@ export const About: React.FC = () => {
       <div className="md:w-full md:h-[500px] mb-4 px-2">
         <Container>
           <div className=" flex flex-col md:flex-row justify-center items-center">
-            <div className="md:w-[30%] h-full mt-6 shadow-xl">
+            <div className="md:w-[30%] h-full mt-6 shadow-xl md:shadow-none">
               <Image
                 src="/images/bfi6.jpg"
                 alt=""

@@ -66,7 +66,7 @@ const Clients: React.FC = () => {
     {
       loop: true,
       slides: {
-        perView: 5,
+        perView: 8,
         spacing: 10,
       },
     },
@@ -78,15 +78,15 @@ const Clients: React.FC = () => {
     ]
   );
   return (
-    <div className="w-full h-600px mt-10 bg-black">
+    <div className="w-full h-600px mt-10 bg-light">
       <Container>
-        <div className="flex flex-col justify-center items-center gap-[5rem]">
-      <h1>Our happy clients</h1>
-    <div ref={sliderRef} className="keen-slider h-[300px] ">
+        <div className="flex flex-col justify-start items-start gap-[5rem] mx-16">
+      <h1 className="text-5xl font-extrabold text-black mt-4">Our Happy Clients</h1>
+    <div ref={sliderRef} className="keen-slider h-[300px] shadow-xl">
       {
       content.map((item, index) => (
-        <div className="keen-slider__slide number-slide flex justify-center items-center">
-          <img className="h-[100px] w-[100px]" key={index} src={item.image} alt="" />
+        <div className="keen-slider__slide number-slide flex justify-center items-center" key={index}>
+          <img className="h-[80px] w-[80px]" key={index} src={item.image} alt="" />
         </div>
       ))
     }
