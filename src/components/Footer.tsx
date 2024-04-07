@@ -1,10 +1,10 @@
 import Container from "./layout/Container";
 const Footer = () => {
   return (
-    <div className="h-[400px] w-[100%] bg-white text-black">
+    <div className="h-[400px] w-[100%] bg-primary text-black">
       <Container>
         <div className="ml-14 flex flex-col">
-          <img src="/images/BFI-logo.png" alt="" className="w-[100px]" />
+          <img src="/images/BFI-logo.png" alt="" className="w-[100px] bg-light"/>
           <h3 className="font-semibold text-lg">
             Bright Future International Private Limited
           </h3>
